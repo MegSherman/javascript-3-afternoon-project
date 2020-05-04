@@ -133,9 +133,10 @@ console.log(deleteAllThethings)
 */
 
 const removePassword = (obj) => {
-  console.log ()
+  delete obj.password
+  return obj
 }
-return obj
+
 
 
 
@@ -154,7 +155,13 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+
+
+  for (let key in deleteTheBigNumbers) {
+    if (deleteTheBigNumbers[key] > 100) {
+      delete deleteTheBigNumbers[key]
+    }
+  }
 
 
 
@@ -167,7 +174,15 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-//Code Here
+const startsWithK = (obj) => {
+  for (let key in obj) {
+    if (key[0] === 'k') {
+      delete obj[key]
+    }
+  }
+  return obj
+}
+
 
 
 
@@ -182,6 +197,13 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+const hiddenTreasure = (obj) => {
+  for (let key in obj) {
+    if (!obj[key].includes ('treasure')) {
+      delete obj[key]
+    }
+  }
+  return obj
+}
 
 
