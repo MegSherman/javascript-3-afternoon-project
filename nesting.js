@@ -52,14 +52,14 @@ var employees = [
 
 const employeeUpdater = () => {
   for (let key in employees) {
-    if (name = 'Theo') {
-      delete employees[name]
+    if (firstName = 'Theo') {
+      delete obj
     }
-    if (name = 'Lorie') {
-      employees [department] = 'HR'
+    if (firstName = 'Lorie') {
+      employees.department = 'HR'
     }
   }
-  return employees
+  return employeeUpdater
 }
 
 
@@ -78,7 +78,7 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-const removeDuplicates = () => {
+const removeDuplicates = [] => {
   for (let i = 0; i < workplaceAccidents.length; i++) {
     console.log (`For Loop 1 (i): ${i}`)
     for (let j = workplaceAccidents.length - 1; j > i; j--) {
