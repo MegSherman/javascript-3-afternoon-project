@@ -50,7 +50,17 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+const employeeUpdater = () => {
+  for (let key in employees) {
+    if (name = 'Theo') {
+      delete employees[name]
+    }
+    if (name = 'Lorie') {
+      employees [department] = 'HR'
+    }
+  }
+  return employees
+}
 
 
 
@@ -68,7 +78,17 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+const removeDuplicates = () => {
+  for (let i = 0; i < workplaceAccidents.length; i++) {
+    console.log (`For Loop 1 (i): ${i}`)
+    for (let j = workplaceAccidents.length - 1; j > i; j--) {
+      console.log (`For Loop 2 (j): ${j}`)
+      if (arr[i] === arr [j]) {
+        arr.splice (j, 1)
+      }
+    }
+  } return removeDuplicates
+}
 
 
 
@@ -97,8 +117,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.activities[1];
+var fluffy2ndFriend = cat.name;
 
 
 
@@ -138,7 +158,13 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+const recordCleaner = () = => {
+  for (i = 0; i < myCar.length; i++) {
+    if atFaultForAccident = true {
+      atFaultForAccident = false
+    }
+  }
+}
 
 
 
@@ -157,6 +183,14 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+const oddAndEven = (numsArr) => {
+  for (i=0; i < numsArr.length, i++) {
+    if (i % 2 === 0) {
+      splice (i, 1, 'even')
+    } else if (i % 2 !=== 0) {
+      splice (i, 1, 'odd')
+    }
+  } return oddAndEven
+}
 
 
