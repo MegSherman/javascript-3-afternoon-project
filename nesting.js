@@ -194,7 +194,7 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-const looper = (numsArr) => {
+const looper = () => {
   for (let i = 0; i < numsArr.length; i++) {
     for (let j = 0; j < numsArr[i].length; j++) {
       if (numsArr[i][j] % 2 === 0) {
@@ -206,4 +206,3 @@ const looper = (numsArr) => {
   } console.log(numsArr)
   return numsArr
 }
-looper (numsArr)
