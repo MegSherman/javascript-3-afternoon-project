@@ -51,15 +51,19 @@ var employees = [
 */
 
 const employeeUpdater = () => {
-  for (let key in employees) {
-    if (firstName = 'Theo') {
-      delete obj
+  for (let i = 0; i < employees.length; i++) {
+    // console.log(employees [i])
+
+    if (employees[i].firstName === 'Theo') {
+    employees.splice (i, 1)
+    // console.log('Found Theo')
     }
-    if (firstName = 'Lorie') {
-      employees.department = 'HR'
+    if (employees[i].firstName === 'Lorie') {
+    employees[i].department = 'HR'
+    // console.log('Found Lorie')
     }
   }
-  return employeeUpdater
+  return employees
 }
 
 
@@ -78,16 +82,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-const removeDuplicates = [] => {
+const removeDuplicates = () => {
   for (let i = 0; i < workplaceAccidents.length; i++) {
     console.log (`For Loop 1 (i): ${i}`)
     for (let j = workplaceAccidents.length - 1; j > i; j--) {
       console.log (`For Loop 2 (j): ${j}`)
-      if (arr[i] === arr [j]) {
-        arr.splice (j, 1)
+      if (workplaceAccidents[i] === workplaceAccidents[j]) {
+        workplaceAccidents.splice (j, 1)
       }
     }
-  } return removeDuplicates
+  } return workplaceAccidents
 }
 
 
@@ -117,8 +121,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity = cat.activities[1];
-var fluffy2ndFriend = cat.name;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name
 
 
 
@@ -158,13 +162,20 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-const recordCleaner = () = => {
-  for (i = 0; i < myCar.length; i++) {
-    if atFaultForAccident = true {
-      atFaultForAccident = false
+const recordCleaner = () => {
+  for (let i = 0; i < myCar.accidents.length; i++) {
+  if (myCar.accidents[i].atFaultForAccident === true) {
+    myCar.accidents[i].atFaultForAccident = false
     }
   }
 }
+
+  //   for (let i = 0; i < myCar.accidents.length; i++) {
+//     if (myCar.accidents[i].atFaultForAccident === true) {
+//     myCar.accidents[i].atFaultForAccidents = false
+//     }
+//   }
+// }
 
 
 
@@ -183,14 +194,15 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-const oddAndEven = (numsArr) => {
-  for (i=0; i < numsArr.length, i++) {
-    if (i % 2 === 0) {
-      splice (i, 1, 'even')
-    } else if (i % 2 !=== 0) {
-      splice (i, 1, 'odd')
+const looper = (numsArr) => {
+  for (let i = 0; i < numsArr.length; i++) {
+    for (let j = 0; j < numsArr[i].length; j++) {
+      if (numsArr[i][j] % 2 === 0) {
+      numsArr[i][j].splice (j, 1, 'even')
+      } else {
+      numsArr[i][j].splice (j, 1, 'odd')
+      }
     }
-  } return oddAndEven
+  }
+  return numsArr
 }
-
-
