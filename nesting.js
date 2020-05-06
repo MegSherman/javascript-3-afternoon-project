@@ -84,9 +84,9 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 const removeDuplicates = () => {
   for (let i = 0; i < workplaceAccidents.length; i++) {
-    console.log (`For Loop 1 (i): ${i}`)
+    // console.log (`For Loop 1 (i): ${i}`)
     for (let j = workplaceAccidents.length - 1; j > i; j--) {
-      console.log (`For Loop 2 (j): ${j}`)
+    //   console.log (`For Loop 2 (j): ${j}`)
       if (workplaceAccidents[i] === workplaceAccidents[j]) {
         workplaceAccidents.splice (j, 1)
       }
@@ -198,11 +198,12 @@ const looper = (numsArr) => {
   for (let i = 0; i < numsArr.length; i++) {
     for (let j = 0; j < numsArr[i].length; j++) {
       if (numsArr[i][j] % 2 === 0) {
-      numsArr[i][j].splice (j, 1, 'even')
+      numsArr[i].splice (j, 1, 'even')
       } else {
-      numsArr[i][j].splice (j, 1, 'odd')
+      numsArr[i].splice (j, 1, 'odd')
       }
     }
-  }
+  } console.log(numsArr)
   return numsArr
 }
+looper (numsArr)
